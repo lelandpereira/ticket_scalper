@@ -10,7 +10,8 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = current_user.events.page(params[:page]).per(10)
+    @q = current_user.events.ransack(params[:q])
+    @events = @q.result(:distinct => true).includes(:username).page(params[:page]).per(10)
 
     render("event_templates/index.html.erb")
   end
