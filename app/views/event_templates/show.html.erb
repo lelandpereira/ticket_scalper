@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link event start -->
       <div class="col">
         <% if current_user == @event.username %>
           <a href="/events/<%= @event.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link event end -->
 
-      <!-- Delete link event start -->
       <div class="col">
         <% if current_user == @event.username %>
           <a href="/delete_event/<%= @event.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link event end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @event.username.present? %>
           <a href="/users/<%= @event.user_id %>">
@@ -44,55 +39,42 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Start time
       </dt>
-      <!-- Display start_time start -->
       <dd>
         <%= @event.start_time %>
       </dd>
-      <!-- Display start_time end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @event.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Message sent
       </dt>
-      <!-- Display message_sent start -->
       <dd>
         <%= @event.message_sent %>
       </dd>
-      <!-- Display message_sent end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@event.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@event.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

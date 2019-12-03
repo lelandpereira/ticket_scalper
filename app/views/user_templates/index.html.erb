@@ -10,13 +10,9 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -54,41 +50,29 @@
 
       <% @users.each do |user| %>
       <tr>
-        <!-- Display user.id start -->
         <td>
           <%= user.id %>
         </td>
-        <!-- Display user.id end -->
 
-        <!-- Display user.email start -->
         <td>
           <%= user.email %>
         </td>
-        <!-- Display user.email end -->
 
-        <!-- Display user.password start -->
         <td>
           <%= user.password %>
         </td>
-        <!-- Display user.password end -->
 
-        <!-- Display user.phone_number start -->
         <td>
           <%= user.phone_number %>
         </td>
-        <!-- Display user.phone_number end -->
 
-        <!-- Display user.created_at start -->
         <td>
           <%= time_ago_in_words(user.created_at) %> ago
         </td>
-        <!-- Display user.created_at end -->
 
-        <!-- Display user.updated_at start -->
         <td>
           <%= time_ago_in_words(user.updated_at) %> ago
         </td>
-        <!-- Display user.updated_at end -->
 
         <td>
           <a href="/users/<%= user.id %>">

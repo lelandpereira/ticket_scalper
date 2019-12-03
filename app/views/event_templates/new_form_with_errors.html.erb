@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @event.present? %>
   <% if @event.errors.any? %>
     <% @event.errors.full_messages.each do |message| %>
@@ -16,46 +15,29 @@
 
 <hr>
 
-<!-- Form event start -->
 <form action="/create_event" method="post">
-<!-- Form event end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for "user_id" start -->
   <input type="hidden" name="user_id" value="<%= current_user.id %>">
-  <!-- Input for "user_id" end -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for start_time start -->
   <div class="form-group">
     <label for="start_time">
       Start time
     </label>
 
-    <!-- Input for start_time start -->
     <input type="text" id="start_time" name="start_time" class="form-control" value="<%= @event.start_time %>">
-    <!-- Input for start_time end -->
   </div>
-  <!-- Label and input for start_time end -->
 
-  <!-- Label and input for description start -->
   <div class="form-group">
     <label for="description">
       Description
     </label>
 
-    <!-- Input for description start -->
     <input type="text" id="description" name="description" class="form-control" value="<%= @event.description %>">
-    <!-- Input for description end -->
   </div>
-  <!-- Label and input for description end -->
 
-  <!-- Label and input for message_sent start -->
   <div class="form-check">
     <input type="hidden" value="0" name="message_sent">
-    <!-- Input for message_sent start -->
     <input id="message_sent" class="form-check-input" name="message_sent" type="checkbox" <%= "checked" if @event.message_sent %>>
-    <!-- Input for message_sent end -->
     <label for="message_sent" class="form-check-label">
       Message sent
     </label>

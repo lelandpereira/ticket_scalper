@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "event_templates/events_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -62,13 +58,10 @@
 
       <% @events.each do |event| %>
       <tr>
-        <!-- Display event.id start -->
         <td>
           <%= event.id %>
         </td>
-        <!-- Display event.id end -->
 
-        <!-- Display event.user_id start -->
         <td>
           <% if event.username.present? %>
             <a href="/users/<%= event.username.id %>">
@@ -76,37 +69,26 @@
             </a>
           <% end %>
         </td>
-        <!-- Display event.user_id end -->
 
-        <!-- Display event.start_time start -->
         <td>
           <%= event.start_time %>
         </td>
-        <!-- Display event.start_time end -->
 
-        <!-- Display event.description start -->
         <td>
           <%= event.description %>
         </td>
-        <!-- Display event.description end -->
 
-        <!-- Display event.message_sent start -->
         <td>
           <%= event.message_sent %>
         </td>
-        <!-- Display event.message_sent end -->
 
-        <!-- Display event.created_at start -->
         <td>
           <%= time_ago_in_words(event.created_at) %> ago
         </td>
-        <!-- Display event.created_at end -->
 
-        <!-- Display event.updated_at start -->
         <td>
           <%= time_ago_in_words(event.updated_at) %> ago
         </td>
-        <!-- Display event.updated_at end -->
 
         <td>
           <a href="/events/<%= event.id %>">
