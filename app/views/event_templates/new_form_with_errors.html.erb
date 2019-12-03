@@ -21,15 +21,9 @@
 <!-- Form event end -->
 
   <!-- Label and input for user_id start -->
-  <div class="form-group">
-    <label for="user_id">
-      User
-    </label>
-
-    <!-- Input for user_id start -->
-    <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :email, @event.user_id), :class => "form-control") %>
-    <!-- Input for user_id end -->
-  </div>
+  <!-- Input for "user_id" start -->
+  <input type="hidden" name="user_id" value="<%= current_user.id %>">
+  <!-- Input for "user_id" end -->
   <!-- Label and input for user_id end -->
 
   <!-- Label and input for start_time start -->

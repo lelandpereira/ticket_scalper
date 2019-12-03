@@ -43,7 +43,7 @@ class EventsController < ApplicationController
   def update_row
     @event = Event.find(params.fetch("id_to_modify"))
 
-    @event.user_id = params.fetch("user_id")
+    
     @event.start_time = params.fetch("start_time")
     @event.description = params.fetch("description")
     @event.message_sent = params.fetch("message_sent")
