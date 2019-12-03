@@ -13,17 +13,21 @@
 
       <!-- Edit link event start -->
       <div class="col">
-        <a href="/events/<%= @event.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit event
-        </a>
+        <% if current_user == @event.username %>
+          <a href="/events/<%= @event.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit event
+          </a>
+        <% end %>
       </div>
       <!-- Edit link event end -->
 
       <!-- Delete link event start -->
       <div class="col">
-        <a href="/delete_event/<%= @event.id %>" class="btn btn-block btn-outline-secondary">
-          Delete event
-        </a>
+        <% if current_user == @event.username %>
+          <a href="/delete_event/<%= @event.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete event
+          </a>
+        <% end %>
       </div>
       <!-- Delete link event end -->
     </div>
