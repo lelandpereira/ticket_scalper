@@ -1,0 +1,91 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Event #<%= @event.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/events" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link event start -->
+      <div class="col">
+        <a href="/events/<%= @event.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit event
+        </a>
+      </div>
+      <!-- Edit link event end -->
+
+      <!-- Delete link event start -->
+      <div class="col">
+        <a href="/delete_event/<%= @event.id %>" class="btn btn-block btn-outline-secondary">
+          Delete event
+        </a>
+      </div>
+      <!-- Delete link event end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @event.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Start time
+      </dt>
+      <!-- Display start_time start -->
+      <dd>
+        <%= @event.start_time %>
+      </dd>
+      <!-- Display start_time end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @event.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Message sent
+      </dt>
+      <!-- Display message_sent start -->
+      <dd>
+        <%= @event.message_sent %>
+      </dd>
+      <!-- Display message_sent end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@event.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@event.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
