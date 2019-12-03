@@ -1,4 +1,6 @@
 ActiveAdmin.register Event do
+
+ permit_params :user_id, :start_time, :description, :message_sent
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
