@@ -60,3 +60,5 @@ gem 'activeadmin', '1.2.1'
 gem "rollbar"
 gem "kaminari"
 gem "bootstrap4-kaminari-views"
+gem 'seed_dump', :git => 'https://github.com/firstdraft/seed_dump.git'
+gem 'activerecord-import'

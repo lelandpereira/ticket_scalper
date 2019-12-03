@@ -6,6 +6,14 @@ GIT
       devise
 
 GIT
+  remote: https://github.com/firstdraft/seed_dump.git
+  revision: 08707d80fa0d9776b2118fbdabd66f9548181e0a
+  specs:
+    seed_dump (3.2.4)
+      activerecord (>= 4)
+      activesupport (>= 4)
+
+GIT
   remote: https://github.com/firstdraft/web_git.git
   revision: 3aeee54ff417a21a2e504c1b88428a45e227c583
   specs:
@@ -66,6 +74,8 @@ GEM
       activemodel (= 5.1.7)
       activesupport (= 5.1.7)
       arel (~> 8.0)
+    activerecord-import (1.0.3)
+      activerecord (>= 3.2)
     activesupport (5.1.7)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
@@ -292,6 +302,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (= 1.2.1)
+  activerecord-import
   bootstrap4-kaminari-views
   byebug
   coffee-rails (~> 4.2)
@@ -308,6 +319,7 @@ DEPENDENCIES
   rspec-rails
   rubocop (= 0.58.1)
   sass-rails (~> 5.0)
+  seed_dump!
   shoulda-matchers
   sqlite3
   tzinfo-data
