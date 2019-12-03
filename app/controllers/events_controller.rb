@@ -57,6 +57,14 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy_row_from_username
+    @event = Event.find(params.fetch("id_to_remove"))
+
+    @event.destroy
+
+    redirect_to("/users/#{@event.user_id}", notice: "Event deleted successfully.")
+  end
+
   def destroy_row
     @event = Event.find(params.fetch("id_to_remove"))
 

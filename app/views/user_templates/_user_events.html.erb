@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Events
+
+    <a data-toggle="collapse" href="#user_events_new_form">
+      Add event
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.events.each do |event| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/events/<%= event.id %>">
+          <%= event.user_id %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>
