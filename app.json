@@ -1,0 +1,60 @@
+{
+  "name": "ticket_scalper",
+  "scripts": {
+    "postdeploy": "bundle exec rails db:migrate && bundle exec rails db:seed && bundle exec rails dev:prime"
+  },
+  "env": {
+    "APPLICATION_HOST":{
+      "required":true
+    },
+    "CLOUDINARY_CLOUD_NAME":{
+      "required":true
+    },
+    "CLOUDINARY_API_KEY":{
+      "required":true
+    },
+    "CLOUDINARY_API_SECRET":{
+      "required":true
+    },
+    "LANG": {
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required":true
+    },
+    "HEROKU_PARENT_APP_NAME": {
+      "required":true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
