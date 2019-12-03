@@ -66,7 +66,11 @@
 
         <!-- Display event.user_id start -->
         <td>
-          <%= event.username.email %>
+          <% if event.username.present? %>
+            <a href="/users/<%= event.username.id %>">
+              <%= event.username.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display event.user_id end -->
 
