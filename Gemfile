@@ -52,3 +52,5 @@ gem 'draft_generators', git: 'https://github.com/firstdraft/draft_generators.git
 gem 'web_git', github: 'firstdraft/web_git'
 gem 'activeadmin', '1.2.1'
 gem "rollbar"
+gem "kaminari"
+gem "bootstrap4-kaminari-views"

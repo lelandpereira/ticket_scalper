@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.page(params[:page]).per(10)
 
     render("user_templates/index.html.erb")
   end
