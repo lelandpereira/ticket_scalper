@@ -166,7 +166,7 @@ GEM
     momentjs-rails (2.20.1)
       railties (>= 3.1)
     nio4r (2.5.2)
-    nokogiri (1.10.5)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     octicons (9.3.1)
       nokogiri (>= 1.6.3.1)
